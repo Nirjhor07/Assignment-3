@@ -44,3 +44,23 @@ function finalScore(omr) {
     return "Invalid";
   }
 }
+
+// Problem Statement - 4
+/*function signature/sample */
+function gonoVote(array) {
+  if (Array.isArray(array) !== true) {
+    return "Invalid";
+  } else {
+    const haCount = array.filter((item) => item === "ha").length;
+    const naCount = array.filter((item) => item === "na").length;
+    if (haCount > naCount) {
+      return true;
+    } 
+    else if (haCount === naCount){
+        return 'equal'
+    }
+    else {
+      return false;
+    }
+  }
+}
