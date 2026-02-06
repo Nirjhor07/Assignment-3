@@ -10,3 +10,17 @@ function newPrice(currentPrice, discount) {
   const actualOutput = newPrice.toFixed(3);
   return actualOutput;
 }
+
+// Problem Statement - 2
+/*function signature/sample */
+function validOtp(otp) {
+  if (typeof otp !== "string") {
+    return "Invalid";
+  } else if (otp.startsWith("ph-") !== true) {
+    return false;
+  } else if (otp.length !== 8) {
+    return false;
+  } else if (otp.length === 8) {
+    return true;
+  }
+}
