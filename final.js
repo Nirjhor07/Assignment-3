@@ -55,12 +55,34 @@ function gonoVote(array) {
     const naCount = array.filter((item) => item === "na").length;
     if (haCount > naCount) {
       return true;
-    } 
-    else if (haCount === naCount){
-        return 'equal'
-    }
-    else {
+    } else if (haCount === naCount) {
+      return "equal";
+    } else {
       return false;
     }
+  }
+}
+
+// Problem Statement - 5
+/*function signature/sample */
+function analyzeText(str) {
+  if (typeof str !== "string" || str.trim() === "") {
+    return "Invalid";
+  } else {
+    const words = str.trim().split(/\s+/);
+    let bigWord = "";
+
+    for (let word of words) {
+      if (word.length > bigWord.length) {
+        bigWord = word;
+      }
+    }
+
+    const obj = {
+      longwords: bigWord,
+      token: str.replace(/\s+/g, "").length,
+    };
+
+    return obj;
   }
 }
