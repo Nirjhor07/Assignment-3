@@ -1,3 +1,4 @@
+// Problem Statement - 1
 function newPrice(currentPrice, discount) {
   if (typeof currentPrice !== "number" || typeof discount !== "number") {
     return "Invalid";
@@ -9,6 +10,3 @@ function newPrice(currentPrice, discount) {
   const actualOutput = newPrice.toFixed(3);
   return actualOutput;
 }
-
-const result = newPrice(100, 120);
-console.log(result);
